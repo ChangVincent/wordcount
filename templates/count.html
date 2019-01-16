@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>There are {{ count }} words</h1>
+
+    <a href="{% url 'home' %}">Start again</a>
+
+
+    <h2>{{ wordlist }}</h2>
+    <h2>{{ fulltext }}</h2>
+    {% for word, wordCount in dict %}
+    {{ word }} {{ wordCount }}
+    <br/>
+    {% endfor %}
+</body>
+</html>
